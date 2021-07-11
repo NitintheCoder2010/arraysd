@@ -1,0 +1,198 @@
+<html>
+    <head>
+<title> Array Project </title>
+<link rel="stylesheet" href = "style.css">
+<script src="main.js"></script>
+    </head>
+
+    <body>
+<h1>Open Console </h1>
+
+<h2>Name of the Primes - Tranformers </h2>
+
+<p id = "name_primes"></p>
+
+<h2>Autobots Prime</h2>
+
+<p id = "autobot_prime"></p>
+
+<h2> Types of Transformers</h2>
+
+<p id = "Type_Transformers"></p>
+
+<h2> Number of the Transformer's Kind</h2>
+
+<p id = "Kind_Transformers"></p>
+
+
+<!--Class 77 - Intro to Console, Text Functions & Math Functions-->
+<script>
+    console.log("Hi I'm the console screen");
+    console.log("I'm Nitin");
+    
+    var first_name="console";
+    var last_name="screen";
+    
+    console.log(first_name);
+    console.log(last_name);
+    
+    var full_name = first_name.concat(last_name);
+    console.log(full_name);
+        
+    var length_of_full_name = full_name.length;
+    console.log(length_of_full_name);
+
+    var name_one = "I'm Captain America";
+    console.log(name_one);
+
+    var replace_name = name_one.replace("America", "Marvel");
+    console.log(replace_name);
+    
+    var capital_name =  "BATMAN";
+    console.log(capital_name);
+
+    var small_name="ironman";
+    console.log(small_name);   
+
+    var making_lower_case = capital_name.toLowerCase();
+    console.log(making_lower_case);
+
+    var making_upper_case = small_name.toUpperCase();
+    console.log(making_upper_case);
+
+    var num_one = 16;
+    console.log(num_one);
+
+    var num_square_root = Math.sqrt(num_one);
+    console.log(num_square_root);
+
+    var num_two = 144;
+    var num_three = 100;
+    console.log(num_two);
+    console.log(num_three);
+
+    var min_num = Math.min(num_two,num_three);
+    var max_num = Math.max (num_two,num_three);
+
+    console.log(min_num);
+    console.log(max_num);
+
+    var power_num = Math.pow(5,4);
+    console.log(power_num);
+
+// Class 78-- Introduction od Arrays
+ 
+ var transformers = [];
+ transformers = ["Optimus Prime", "Megatron"];
+
+ console.log(transformers);
+
+ document.getElementById("name_primes").innerHTML = transformers;
+
+ var transformers_2 = ["Autobots", "Decepticons"];
+
+ console.log(transformers_2);
+
+ document.getElementById("Type_Transformers").innerHTML = transformers_2;
+
+ var autobot_prime = transformers[0];
+
+ document.getElementById("autobot_prime").innerHTML = autobot_prime;
+
+
+ document.getElementById("Kind_Transformers").innerHTML = transformers_2.length;
+
+ var toys = ["Legos","Nerf","AvengersToy"]; // length = 3
+
+ // index [0,1,2]; elements = 1,2,3 i.e. length 3 
+ var array_new ="";
+
+ for (i=0; i < toys.length; i++) {
+     console.log(toys[i]);
+     array_new = array_new + toys[i];
+ }
+
+
+ // Without "<br>" tag
+ //Iteration 1 => i = 0, console --> Legos , array new = "" + "Legos"  = "Legos"
+ // Iteration 2 => i = 1, console --> Nerf , array new = "Legos" + "Nerf" = "LegosNerf"
+ // Iteration 3 => i = 2, console --> Avengers Toy, array new = "LegosNerf" + "Avengers Toy" = "LegosNerfAvengers Toy"
+ // Iteration 4 => i = 3, loop ends i<3 but i = 3 XXXXX
+
+ //---------------------------------------------------------------//
+ //With "<br>" Tag 
+
+ //Iteration 1 => i = 0, console --> Legos , array new = "" + "Legos" +<br>  = 
+ //"Legos"
+ // Iteration 2 => i = 1, console --> Nerf , array new = "Legos" + "Nerf" = 
+ //"Legos
+ // Nerf"
+
+ // Iteration 3 => i = 2, console --> Avengers Toy, array new = "LegosNerf" + "Avengers Toy" = 
+ //"Legos
+ //Nerf
+ //Avengers Toy"
+ // Iteration 4 => i = 3, loop ends i<3 but i = 3 XXXXX
+
+console.log(array_new);
+
+toys.push("Boardgames");
+
+
+console.log(toys);
+
+toys.sort();
+console.log(toys);
+
+toys.reverse();
+
+console.log(toys);
+
+//Class 79
+
+</script>
+
+<br>
+<span>1.</span>
+<input id = "name of the decepticon_1" type = "text" placeholder = " Enter the name of the Decepticons">
+<br>
+<span>2.</span>
+<input id = "name of the decepticon_2" type = "text" placeholder = " Enter the name of the Decepticons">
+<br>
+<span>3.</span>
+<input id = "name of the decepticon_3" type = "text" placeholder = " Enter the name of the Decepticons">
+<br>
+<span>4.</span>
+<input id = "name of the decepticon_4" type = "text" placeholder = " Enter the name of the Decepticons">
+
+
+<br>
+<div id="display_array_D"></div>
+
+<br>
+<button onclick="Submit()" id = "list_dcep"> Submit </button>
+
+<br>
+<span>1.</span>
+<input id = "name of the transformer_1" type = "text" placeholder = " Enter the name of the Transformer">
+<br>
+<span>2.</span>
+<input id = "name of the transformer_2" type = "text" placeholder = " Enter the name of the Transformer">
+<br>
+<span>3.</span>
+<input id = "name of the transformer_3" type = "text" placeholder = " Enter the name of the Transformer">
+<br>
+<span>4.</span>
+<input id = "name of the transformer_4" type = "text" placeholder = " Enter the name of the Transformer">
+<br>
+<button onclick = "save_array()" id="submit_button"> Submit </button>
+
+<br>
+<div id="display_array"></div>
+
+<br>
+<button onclick="sorting()" id = "sort_button"> Sort </button>
+
+<br>
+    </body>
+</html>
